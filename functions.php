@@ -11,6 +11,37 @@ function bootscore_child_enqueue_styles() {
   $modified_bootscoreChildCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/css/main.css'));
   wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.css', array('parent-style'), $modified_bootscoreChildCss);
 
-  // custom.js
+}
+
+// custom.js as last one
+function dpsg_load_script_last() {
   wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
 }
+add_action( 'wp_enqueue_scripts', 'dpsg_load_script_last', 99999 );
+
+// custom-logo support
+add_action( 'after_setup_theme', function(){
+
+  $defaults = array(
+	  'height'               => 78,
+	  'flex-height'          => true,
+	  'flex-width'           => true,
+	  'header-text'          => array( 'site-title', 'site-description' ),
+	  'unlink-homepage-logo' => false
+  );
+  add_theme_support( 'custom-logo', $defaults );
+
+  });
+
+
+/** ADD CSS & JS TO GUTENBERG EDITOR + ADD GUTENBERG BLOCKS**/
+include_once('inc/gutenberg.php');
+
+/** EDIT SOME BOOTSCORE FUNCTIONS **/
+include_once('inc/bootscore.php');
+
+/** ADD CUSTOM FUNCTIONS **/
+include_once('inc/custom.php');
+
+/** ADD CUSTOM SHORTCODES **/
+include_once('inc/shortcode.php');

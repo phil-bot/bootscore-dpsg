@@ -1,0 +1,35 @@
+/******************
+ COLORS
+******************/
+
+/*** TITLES/HEADINGS ***/
+
+// SET PRIMARY COLOR FOR HEADINGS
+h1, h2, h3, h4, h5, h6
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+.editor-post-title__block .editor-post-title__input {
+  color: var(--bs-primary) !important;
+}
+
+// HEADINGS ON IMAGES ARE WHITE WITH SHADOWS
+h2.blog-post-title a.text-white,
+.featured-full-width-img h1.entry-title,
+.wp-block-cover .wp-block-cover__inner-container p {
+  color: var(--bs-white) !important;
+  text-shadow: 4px 4px 7px black;
+}
+
+// MAKE LINKS AND TEXT IN CARD-FOOTER AND TEXT IN BREADCRUMB MORE DISCREET
+.card-footer,
+.card-footer a,
+.breadcrumb {
+  color: var(--bs-gray-600) !important;
+}
+
+// MAKE LINKS BREADCRUMB AND FOOTER MORE DISCREET
+.breadcrumb a,
+.text-muted a,
+.bootscore-footer a,
+.bootscore-info a {
+  color: var(--bs-primary) !important;
+}

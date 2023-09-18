@@ -1,0 +1,40 @@
+/******************
+ CONTENT
+******************/
+
+body {
+  background-color: var(--bs-gray-200);
+  height: auto;
+  }
+
+#masthead .head-main .container,
+#page > #content.container,
+#page > #content #main > .container {
+  box-shadow: 0 1px 9px var(--bs-gray-100);
+  }
+
+#page > #content.container,
+#page > #content #main > .container {
+  padding-top: .25rem !important;
+  }
+  
+#page > #content #main > .container {
+  margin-top: -1rem !important;
+  }
+  
+.page-template-page-blank-with-container #page > #content.container {
+  padding-top: .75rem !important;
+  padding-bottom: .75rem !important;
+  }
+
+.comments-area {
+  margin-top: 5rem;
+  }
+  
+body:not(.page-template-page-templates) .entry-content {
+  margin: 1rem;
+  }
+
+.entry-header .post-thumbnail > .wp-post-image {
+  margin-top: 1rem;
+}

@@ -1,0 +1,22 @@
+/******************
+ HEADER
+******************/
+header.site-header #logo {
+  display: inline-flex !important;
+}
+
+#nav-main {
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+}
+
+#nav-main ul.navbar-nav {
+  flex: 1;
+  margin: auto !important;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#nav-main ul#bootscore-navbar > .current-menu-parent > a,
+#nav-main ul#bootscore-navbar > li > a:hover  {
+  text-decoration: underline;
+}

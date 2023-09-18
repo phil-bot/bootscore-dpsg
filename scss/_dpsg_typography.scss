@@ -1,0 +1,64 @@
+/******************
+ TYPOGRAPHY
+******************/
+
+/*** TITLES/HEADINGS ***/
+
+// SET HEADING FONT AND MAKE THEM BIGGER
+h2.blog-post-title a.text-white,
+.featured-full-width-img h1.entry-title,
+.page-header h1,
+.entry-header h1,
+.site-title,
+.site-description,
+.editor-post-title__block .editor-post-title__input,
+.wp-block-cover__inner-container p {
+  font-family: "Suez One" !important;
+  font-size: calc(1.25rem + 1.5vw) !important;
+}
+
+// MAKE ARCHIVE DESC LIKE BOOTSRAP .lead
+.archive-description p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+// CENTER HEADINGS
+.page-header,
+.entry-header {
+  text-align: center;
+}
+
+//CENTER HEADING ON FULL WIDTH TEMPLATE 
+.featured-full-width-img h1.entry-title {
+  margin: 0 auto;
+}
+
+
+/*** NAVBAR ***/
+
+// SET FONT AND ADJUST SIZE
+#nav-main .navbar-brand,
+#nav-main .nav-link,
+#nav-main .dropdown-menu a {
+  font-family: "Suez One";
+  font-size: 1.25rem;
+}
+
+/*** FOOTER ***/
+
+// SET FONT-SIZE AND CENTER NAV
+#footer-menu {
+  font-size: .8rem;
+  justify-content: center !important;
+
+}
+// SET PADDINGS FOR NAV LINKS
+#footer-menu li a {
+  padding: .2rem .5rem !important;
+}
+
+// GIVE FEEDBACK FOR NAV LNKS
+#footer-menu li a:hover {
+  text-decoration: underline !important;
+}

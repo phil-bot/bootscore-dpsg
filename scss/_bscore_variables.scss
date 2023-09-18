@@ -1,2 +1,88 @@
 // In this file you can override the default variables of Bootstrap
 // Do you want primary to be green? Just add "$primary: #00FF00;" to this file and the theme will automatically compile the scss for you.
+
+
+/*** ADDING DPSG FONTS ***/
+
+$theme-root-path: '/wp-content/themes/bootscore-dpsg/';
+
+$suez-one-path: $theme-root-path + 'fonts/suez-one-v5-latin-regular';
+
+@font-face {
+   font-family: 'Suez One';
+   font-style: normal;
+   font-weight: 400;
+   src: url($suez-one-path + '.eot'); /* IE9 Compat Modes */
+   src: local(''),
+        url($suez-one-path + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url($suez-one-path + '.woff2') format('woff2'), /* Super Modern Browsers */
+        url($suez-one-path + '.woff') format('woff'), /* Modern Browsers */
+        url($suez-one-path + '.ttf') format('truetype'), /* Safari, Android, iOS */
+        url($suez-one-path + '.svg#SuezOne') format('svg'); /* Legacy iOS */
+}
+
+/*** TYPOGRAPHY ***/
+
+$headings-font-family: "Suez One";
+$headings-font-weight: 400;
+//$link-hover-color: none;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+/*** SET DPSG COLOR SCHEME ***/
+
+/* DEFAULT COLORS */
+
+$white: #fff;
+$black: #000;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-600: #6c757d;
+
+/* DPSG COLORS */
+
+$orange: #ff6400;
+$blue: #2f53a7;
+$pink: #e6007e;
+$cyan: #009fe3;
+$purple: #a40b74;
+$green: #00823c;
+$teal: #007a8c;
+$red: #cc1f2f;
+$primary: #003056;
+$secondary: #810a1a;
+$yellow: #ffed00;
+$link-color: #9e1e34;
+$gray-100: #D5D9DF;
+$gray-700: #a3b1c5;
+
+/* COLOR-ADJUSTMENTS */ 
+
+$info: $blue;
+$warning: $orange;
+$light: $gray-100;
+
+$list-group-active-bg: $gray-700;
+$table-dark-color: $black;
+$border-color: $gray-700;
+
+$dropdown-bg: $gray-200;
+$dropdown-border-color: $primary;
+$dropdown-divider-bg: $primary;
+$dropdown-link-hover-bg: $secondary;
+$dropdown-link-active-bg: $secondary;
+$dropdown-link-color: $primary;
+$dropdown-link-hover-color: $white;
+
+$offcanvas-bg-color: $primary;
+$offcanvas-transition-duration: .3s;
+/*
+$navbar-dark-color: rgba($white, .75);
+$navbar-dark-hover-color: rgba($white, .90);
+$navbar-dark-active-color: $white;
+$navbar-dark-disabled-color: rgba($white, .25);
+*/
+
+/*** BOOTSTRAP OPTIONS ***/ 
+
+$enable-negative-margins: true;

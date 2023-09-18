@@ -1,0 +1,127 @@
+/******************
+ DPSG SPECIFIC COLOR-CLASSES
+******************/
+
+/*** STUFEN ***/
+
+// WOES
+
+.biber {
+  @extend .bg-white;
+  color: $gray-900 !important;
+  border: 1px solid $gray-900;
+}
+
+.biber h1, 
+.biber h2,
+.biber h3 {
+  color: $gray-900 !important;
+}
+.biber a {
+  color: $gray-900 !important;
+  text-decoration: underline !important;
+}
+
+// WOES
+
+.wölflinge {
+  @extend .bg-warning;
+  color: $orange-200 !important;
+}
+
+.wölflinge h1, 
+.wölflinge h2,
+.wölflinge h3 {
+  color: $orange-100 !important;
+}
+.wölflinge a {
+  color: $orange-100 !important;
+  text-decoration: underline !important;
+}
+
+
+// JUFFI
+
+.jungpfadfinder {
+  @extend .bg-info;
+  color: $blue-200 !important;
+}
+
+.jungpfadfinder h1, 
+.jungpfadfinder h2,
+.jungpfadfinder h3 {
+  color: $blue-100 !important;
+}
+.jungpfadfinder a {
+  color: $blue-100 !important;
+  text-decoration: underline !important;
+}
+
+
+// PFADI
+
+.pfadfinder {
+  @extend .bg-success;
+  color: $green-200 !important;
+}
+
+.pfadfinder h1, 
+.pfadfinder h2,
+.pfadfinder h3 {
+  color: $green-100 !important;
+}
+.pfadfinder a {
+  color: $green-100 !important;
+  text-decoration: underline !important;
+}
+
+
+// ROVER
+
+.rover {
+  @extend .bg-danger;
+  color: $red-200 !important;
+}
+
+.rover h1, 
+.rover h2,
+.rover h3 {
+  color: $red-100 !important;
+}
+.rover a {
+  color: $red-100 !important;
+  text-decoration: underline !important;
+}
+
+
+// LEITER
+
+.leiter {
+  @extend .bg-light;
+  color: $gray-900 !important;
+}
+
+.leiter h1, 
+.leiter h2,
+.leiter h3 {
+  color: $gray-900 !important;
+}
+.leiter a {
+  color: $gray-900 !important;
+  text-decoration: underline !important;
+}
+
+
+
+
+
+
+.volle-breite {
+  @extend .container-fluid;
+  @extend .py-5;
+  @extend .mb-0;
+  }
+  
+.wp-block-columns.container {
+  margin-bottom: 0 !important;
+  }
