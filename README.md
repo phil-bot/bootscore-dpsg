@@ -10,4 +10,4 @@ It follows the DPSG corporate design guide.
 3. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 4. Click Activate to use your new theme right away.
 
-![bootscore-dpsg](screenshopt-png)
+![bootscore-dpsg](screenshot.png)
