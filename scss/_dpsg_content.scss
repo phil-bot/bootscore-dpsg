@@ -17,11 +17,11 @@ body {
 #page > #content #main > .container {
   padding-top: .25rem !important;
   }
-  
+
 #page > #content #main > .container {
   margin-top: -1rem !important;
   }
-  
+
 .page-template-page-blank-with-container #page > #content.container {
   padding-top: .75rem !important;
   padding-bottom: .75rem !important;
@@ -30,11 +30,7 @@ body {
 .comments-area {
   margin-top: 5rem;
   }
-  
-body:not(.page-template-page-templates) .entry-content {
-  margin: 1rem;
-  }
 
-.entry-header .post-thumbnail > .wp-post-image {
-  margin-top: 1rem;
+.entry-header h1 {
+  margin-bottom: 1rem;
 }

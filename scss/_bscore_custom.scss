@@ -27,12 +27,17 @@
   margin-top: 0 !important;
   padding-top: var(--bs-gutter-x, 0.75rem) !important;
 }
+
 // REMOVE DROPDOWN TOGGLE IN MAIN NAV
 @include media-breakpoint-up(lg) {
   #nav-main .dropdown-toggle:after {
     display: none;
   }
 }
+
+// HIDE THE EXCERPT AND MORTE BUTTON IN HEROES
+.heroes .swiper-slide .card-text { display: none; }
+
 // MAKE HEROES BEAUTIFUL ON EVERY SCREEN SIZE 
 .heroes {
   aspect-ratio: 4/3;
@@ -44,15 +49,39 @@
     aspect-ratio: 16/9;
   }
 }
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(lg) {
   .heroes {
     aspect-ratio: 16/7;
   }
 }
-.swiper-hero-img {
+.heroes .swiper-hero-img {
     object-fit: cover;
     height: 100%;
 }
+
+// MAKE CARD IMG-TOP ALL EVEN
+.card-img-top {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+@include media-breakpoint-down(lg) {
+  div.card div.col-lg-6.col-xl-5.col-xxl-4 img.card-img-lg-start.wp-post-image {
+    aspect-ratio: 16/7;
+    object-fit: cover;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .post-thumbnail .wp-post-image {
+    aspect-ratio: 16/5;
+    object-fit: cover;
+  }
+}
+
+
+
+
 // DO NOT LET FULL-WIDTH IMAGES ESCALATE
 .featured-full-width-img {
   background-position: center center;
@@ -82,3 +111,11 @@
 
 //&.has-parallax { @supports (-webkit-overflow-scrolling: touch) { background-attachment: scroll; } }
 @supports (-webkit-overflow-scrolling: touch) { 	body * { 		background-attachment: scroll; 	} }
+
+
+
+@include media-breakpoint-between(md,xl){
+  #secondary.widget-area .btn {
+    font-size: $input-btn-font-size-sm;
+  }
+}

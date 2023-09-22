@@ -5,9 +5,9 @@
 /*** TITLES/HEADINGS ***/
 
 // SET PRIMARY COLOR FOR HEADINGS
-h1, h2, h3, h4, h5, h6
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
-.editor-post-title__block .editor-post-title__input {
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.editor-post-title__block, .editor-post-title__input {
   color: var(--bs-primary) !important;
 }
 

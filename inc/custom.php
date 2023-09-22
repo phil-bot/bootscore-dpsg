@@ -14,8 +14,8 @@ add_filter('body_class', function ($classes) {
 		global $post;
 		$classes[] = $post->post_type . '-' . $post->post_name;
 	}
-
 	return $classes;
+
 });
 
 /*** EDIT QUERYS ***/
@@ -23,9 +23,9 @@ add_filter('body_class', function ($classes) {
 add_filter('pre_get_posts', function ( $query ) {
 
 	// REMOVE STICKY POSTS FROM FRONT PAGE 
-	if ( $query->is_home && $query->query['ignore_sticky_posts'] === 2 ) $query->set( 'post__in', array(0) );
-
+	if ( $query->is_home && $query->query['ignore_sticky_posts'] === 2 && get_theme_option('swiper') == "true") $query->set( 'post__in', array(0) );
 	return $query;
+
 	});
 
 /*** EDIT CONTENT ***/
@@ -47,4 +47,14 @@ add_filter( 'excerpt_length', function ( $length ) {
 	}, 999 );
 
 
+
+/******************
+ FUNCTIONS
+******************/
+
+/*** IS PLUGIN ACTIVE ***/
+
+function dpsg_is_plugin_active($plugin){
+	if(in_array($plugin, apply_filters('active_plugins', get_option('active_plugins')))) return true;
+}
 ?>

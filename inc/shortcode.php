@@ -11,6 +11,11 @@ function get_dpsgi( $icon = '', $classes = '' ) {
 
 /*** SHORTCODES ***/
 
+add_shortcode('dpsgi', function ( $atts ) {
+
+	return get_dpsgi($atts['icon'], 'flex-shrink-0 me-2');
+	});
+
 add_shortcode('bs-childs', function ( $atts ) {
 
 	$child = 'hallo' . ' hallo';

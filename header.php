@@ -1,16 +1,3 @@
-<?php
-
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Bootscore
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
@@ -32,8 +19,6 @@
 <body <?php body_class(); ?>>
     
   <?php wp_body_open(); ?>
-
-  <div id="to-top"></div>
 
   <div id="page" class="site main">
 
@@ -59,7 +44,7 @@
 
     <nav id="nav-main" class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
 
-      <div class="container">
+      <div class="<?= bootscore_container_class(); ?>">
 
         <a class="navbar-brand m-0 p-0 me-2" href="<?php echo esc_url( home_url( '/' ) ); ?>" data-bs-toggle="tooltip" title="<?php bloginfo('description'); ?>">
           <i class="dpsgi dpsgi-lilie d-inline-flex me-1 fs-2 align-middle"></i>
@@ -109,13 +94,7 @@
         <div class="header-actions d-flex align-items-center">
 
 
-          <!-- Navbar Toggler -->
-          <!--<button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar"" aria-controls="offcanvas-navbar" aria-label="Menu öffnen">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi" fill="currentColor" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
-            </svg>
-          </button>
-            -->
+          <!-- Navbar Toggler -->          
           <button class="btn btn-outline-light d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
             <i class="fas fa-bars"></i>
           </button>

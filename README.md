@@ -1,13 +1,39 @@
-# dpsg themed bootScore Child Theme
+# BootScore DPSG
 
-This is a [DPSG](https://dpsg.de/) wordpress theme based on the [bootScore](https://github.com/crftwrk/bootscore) child theme.
-It follows the DPSG corporate design guide.
+Ein WordPress-Child-Theme, basierend auf [bootScore](https://github.com/bootscore/bootscore), das dem [DPSG](https://dpsg.de/) [Corporate Design Leitfaden](http://www.dpsg.de/sites/default/files/2021-04/dpsg_corporate_design_leitfaden.pdf) folgt.
+
+Das Theme beinhaltet:
+
+ - passende [Scoutnet-Kalender](https://github.com/weed-/scoutnet-kalender)-Templates (Inline sowie Widget)
+ - [bS Grid](https://github.com/bootscore/bs-grid)-Template
+ - [bS Swiper](https://github.com/bootscore/bs-swiper)-Template
 
 ## Installation
 
-1. Download latest [bootscore-dpsg-main.zip](https://github.com/phil-bot/bootscore-dpsg/releases) release.
-2. In your admin panel, go to Appearance > Themes and click the Add New button.
-3. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
-4. Click Activate to use your new theme right away.
+1. Neueste [bootscore-main.zip](https://github.com/bootscore/bootscore/releases)-Version herunterladen.
+2. Neueste [bootscore-dpsg-main.zip](https://github.com/phil-bot/bootscore-dpsg/releases)-Version herunterladen.
+3. Gehe in der Verwaltungskonsole zu `Design` > `Themes` und klicke auf die Schaltfläche `Theme hinzufügen`.
+4. Klicke auf `Theme hochladen`, `Durchsuchen...` und wähle dann die `bootscore-main.zip`-Datei. Danach auf `Jetzt installieren`.
+5. Klicke wieder auf `Theme hochladen`, `Durchsuchen...` und wähle dann die `bootscore-dpsg-main.zip`-Datei. Danach auf `Jetzt installieren`.
+6. Zum schluss nur noch auf `Aktivieren` klicken, um das neues Theme sofort zu verwenden.
+
+## Ein paar Eindrücke
+
+### Live-Demo
+
+Demnächst ist hier eine Live-Demo zu sehen: https://dpsg-witten.de
+
+Plugins in der Live-Demo:
+
+ - Scoutnet Kalender
+ - Contact Form 7
+ - bS Contact Form 7
+ - bS Grid
+ - bS Swiper
+ - bS Gutenberg Gallery Lightbox
+ - bS Gutenberg Responsive Video
+ - Sticky Posts - Switch
+
+### Bilder
 
 ![bootscore-dpsg](screenshot.png)

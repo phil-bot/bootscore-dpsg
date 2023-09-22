@@ -28,7 +28,7 @@ $shortmonth = new IntlDateFormatter('de_DE', IntlDateFormatter::MEDIUM, IntlDate
 		</script>
 		<div class="d-grid row-gap-3">
 		<?php foreach($events as $event) { /* @var $event SN_Model_Event */ ?>
-			<div class="d-flex">
+			<div class="d-flex" data-bs-toggle="tooltip" title="<?php echo htmlspecialchars(trim($event->Title)); if ( $event->Description ) : echo ": " . htmlspecialchars($event->Description); endif; ?>">
 				<div class="d-felx flex-shrink-0">
 					<div class="">
 						<small class="d-flex justify-content-center bg-secondary text-white py-0 px-2 rounded-top small font-monospace text-uppercase"><?php echo substr($shortmonth->format($event->Start),0,3); ?></small>
@@ -36,8 +36,8 @@ $shortmonth = new IntlDateFormatter('de_DE', IntlDateFormatter::MEDIUM, IntlDate
 					</div>
 				</div>
 				<div class="d-flex flex-grow-1 ms-3 mb-0">
-					<div class="">
-						<h5 class="mb-0"  data-bs-toggle="tooltip"  title="<?php echo htmlspecialchars($event->Description); ?>"><?php echo htmlspecialchars(trim($event->Title)); ?><?php if ( $event->Description ) : ?><i class="dpsgi dpsgi-message ms-2 small text-secondary"></i><?php endif; ?></h5></i>
+					<div class="col-11 col-md-6 col-lg-7 col-xl-9 col-xxl-11">
+						<h6 class="mb-0 text-truncate"><?php echo htmlspecialchars(trim($event->Title)); ?></h6>
 						<span class="text-muted small">
 							<?php if ( $event->Location ) : ?>
 								<div>

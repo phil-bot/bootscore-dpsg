@@ -17,12 +17,14 @@ $startdate = 'EEEE, dd. MMM';
 $enddate = 'EEEE, dd. MMM';
 $time = 'HH:mm';
 
-// Monats "Zsähler" auf null
+// Monats "Zähler" auf null
 
 $currentmonth = null;
 
 /* @var $event SN_Model_Event */
-
+?>
+<div>
+<?php
 foreach($events as $event) :
 
 $duration['D'] = ceil( ($event->End - $event->Start) / (3600*24) ); // dauer berechnen (Tage)
@@ -31,11 +33,11 @@ $duration['H'] = ceil( ($event->End - $event->Start) / (3600) ); // dauer berech
 // PLZ: if (trim($event->ZIP)!="") {echo htmlspecialchars($event->ZIP) . " ";}
 ?>
 
-<?php echo ( $currentmonth != $datefmt->format($event->Start, $monthyear) ) ? '<h2 class="text-center mt-5 mb-4"> ' . $datefmt->format($event->Start, $monthyear) . '</h2>' : '' ?>
+<?php echo ( $currentmonth != $datefmt->format($event->Start, $monthyear) ) ? '</div><h2 class="text-center my-4"> ' . $datefmt->format($event->Start, $monthyear) . '</h2><div class="row justify-content-center">' : '' ?>
 
 <?php $currentmonth = $datefmt->format($event->Start, $monthyear); ?>
-
-<div class="card horizontal mb-4">
+<div class="col-lg-6 col-xxl-4 mb-4">
+<div class="card horizontal">
 	<div class="row g-0">
 		<div class="card-body">
 
@@ -60,7 +62,7 @@ $duration['H'] = ceil( ($event->End - $event->Start) / (3600) ); // dauer berech
 			<?php endif; ?>
 			</li>
 
-			<?php echo ($event->Location ? '<li><span class="fa-li"><i class="fa fa-location"></i></span>' . htmlspecialchars($event->Location) . '</li>' : ''); ?>
+			<?php echo ($event->Location ? '<li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>' . htmlspecialchars($event->Location) . '</li>' : ''); ?>
 			</ul>
 
 			<p class="card-text"><?php echo ($event->Description ? htmlspecialchars($event->Description) : "<i>keine Beschreibung</i>" ); ?></p>
@@ -71,9 +73,10 @@ $duration['H'] = ceil( ($event->End - $event->Start) / (3600) ); // dauer berech
 			
 		</div>
 
-		<div class="card-footer text-body-secondary"><?php echo ($event->Author->get_full_name() ? "Autor: " . htmlspecialchars($event->Author->get_full_name()) : "" ); ?> (ge&auml;ndert am <?php echo ($event->Last_Modified_At ? $datefmt->format($event->Last_Modified_At, $fulldate) : $datefmt->format($event->Created_At, $fulldate) ); ?>)</div>
+		<div class="card-footer text-body-secondary small"><?php echo ($event->Author->get_full_name() ? "Autor: " . htmlspecialchars($event->Author->get_full_name()) : "" ); ?> (ge&auml;ndert am <?php echo ($event->Last_Modified_At ? $datefmt->format($event->Last_Modified_At, $fulldate) : $datefmt->format($event->Created_At, $fulldate) ); ?>)</div>
 
 	</div>
+</div>
 </div>
 
 <?php endforeach; ?>
