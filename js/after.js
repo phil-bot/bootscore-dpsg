@@ -1,7 +1,7 @@
 jQuery(function ($) {
 
 /******************
- THEME ADJUSTMENTS
+ 
 ******************/
 
 	/*** Activate bootstrap tooltips ***/
