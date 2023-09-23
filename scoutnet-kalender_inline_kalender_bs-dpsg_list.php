@@ -1,7 +1,5 @@
 <?php
 
-require_once ('scoutnet-kalender_functions-classes.php');
-
 // Datumsformatierung
 
 $locale = 'de_DE'; // deutsches Ausgabeformat
@@ -68,7 +66,7 @@ $duration['H'] = ceil( ($event->End - $event->Start) / (3600) ); // dauer berech
 			<p class="card-text"><?php echo ($event->Description ? htmlspecialchars($event->Description) : "<i>keine Beschreibung</i>" ); ?></p>
 
 			<?php if ( trim($event->URL) != "" ) : ?>
-			<p class="card-text"><a class="read-more" title="<?php echo short_url($event->URL, 100); ?>" href="<?php echo htmlspecialchars($event->URL); ?>"><?php echo (trim($event->URL_Text) ? htmlspecialchars($event->URL_Text) : 'Mehr Informationen'); ?><i class="dpsgi dpsgi-arrow-link ms-2"></i></a></p>
+			<p class="card-text"><a class="read-more" title="<?php echo dpsg_short_url($event->URL, 100); ?>" href="<?php echo htmlspecialchars($event->URL); ?>"><?php echo (trim($event->URL_Text) ? htmlspecialchars($event->URL_Text) : 'Mehr Informationen'); ?><i class="dpsgi dpsgi-arrow-link ms-2"></i></a></p>
 			<?php endif; ?>
 			
 		</div>

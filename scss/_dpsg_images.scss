@@ -1,0 +1,59 @@
+/******************
+ IMAGES
+******************/
+
+// HIDE THE EXCERPT AND MORTE BUTTON IN HEROES
+.heroes .swiper-slide .card-text { display: none; }
+
+// MAKE HEROES BEAUTIFUL ON EVERY SCREEN SIZE 
+.heroes {
+  aspect-ratio: 4/3;
+  max-width: 100%;
+  border-radius: .375rem;
+  }
+@include media-breakpoint-up(md) {
+  .heroes {
+    aspect-ratio: 16/9;
+    }
+  }
+@include media-breakpoint-up(lg) {
+  .heroes {
+    aspect-ratio: 16/7;
+  }
+}
+.heroes .swiper-hero-img {
+  object-fit: cover;
+  height: 100%;
+  }
+
+// MAKE CARD IMG-TOP ALL EVEN
+.card-img-top {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  }
+
+// MAKE wp-post-images BEAUTIFUL ON EVERY SCREEN SIZE 
+@include media-breakpoint-down(lg) {
+  div.card div.col-lg-6.col-xl-5.col-xxl-4 img.card-img-lg-start.wp-post-image {
+    aspect-ratio: 16/7;
+    object-fit: cover;
+    }
+  }
+
+@include media-breakpoint-up(lg) {
+  .post-thumbnail .wp-post-image {
+    aspect-ratio: 16/5;
+    object-fit: cover;
+    }
+  }
+
+// DO NOT LET FULL-WIDTH IMAGES ESCALATE
+.featured-full-width-img {
+  background-position: center center;
+  height: 15rem !important;
+}
+@include media-breakpoint-up(md) {
+  .featured-full-width-img {
+    height: 30rem !important;
+  }
+}

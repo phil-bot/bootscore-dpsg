@@ -1,4 +1,4 @@
-# BootScore DPSG
+# bootScore DPSG
 
 Ein WordPress-Child-Theme, basierend auf [bootScore](https://github.com/bootscore/bootscore), das dem [DPSG](https://dpsg.de/) [Corporate Design Leitfaden](http://www.dpsg.de/sites/default/files/2021-04/dpsg_corporate_design_leitfaden.pdf) folgt.
 

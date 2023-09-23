@@ -1,7 +1,5 @@
 <?php
 
-require_once ('scoutnet-kalender_functions-classes.php');
-
 // Datumsformatierung
 
 $locale = 'de_DE'; // deutsches Ausgabeformat

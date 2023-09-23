@@ -1,14 +1,5 @@
 <?php
 
-/*** DPSG ICONS ***/
-
-function get_dpsgi( $icon = '', $classes = '' ) {
-
-	if ( isset( $icon ) ) $icon = '<i class="dpsgi dpsgi-' . $icon . ' ' . $classes . '"></i>';
-	return $icon;
-	}
-
-
 /*** SHORTCODES ***/
 
 add_shortcode('dpsgi', function ( $atts ) {

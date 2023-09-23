@@ -18,7 +18,6 @@ add_action('bs_after_primary', function () {
 	}
 
 	/** ADD CAROUSEL/SWIPER TO FRONT PAGE **/
-
 	if ( is_home() && !is_paged() && get_theme_option('swiper') == "true" && dpsg_is_plugin_active( 'bs-swiper-main/main.php' )) {
 		$sticky = get_option( 'sticky_posts' );
 		rsort( $sticky );
