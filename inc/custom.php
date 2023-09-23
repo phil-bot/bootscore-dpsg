@@ -51,10 +51,22 @@ function dpsg_short_url($url, $length = 100) {
 	$furl = array_filter(explode('/', $url['path']));
 	if(count($furl) > 1) $u = '../';
 	$url['path'] = $u.array_pop($furl);
-	$ausgabe = $url['scheme'].'://'.$url['host'].'/'.$url['path'];
-	print substr($ausgabe, 0, $length);
+	if ($length == 'host') {
+		$ausgabe = str_replace('www.','',$url['host']);
+		} else {
+		$ausgabe = substr(str_replace('www.','',$url['host']).'/'.$url['path'], 0, $length);
+		}
+	return $ausgabe;
 	}
 
+function dpsg_get_url_title($url){
+	$str = file_get_contents($url);
+	if(strlen($str)>0){
+		$str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks inside <title>
+		preg_match("/\<title\>(.*)\<\/title\>/i",$str,$title); // ignore case
+		return $title[1];
+		}
+	}
 
 /*** DPSG ICONS ***/
 
