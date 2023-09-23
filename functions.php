@@ -34,19 +34,19 @@ add_action( 'after_setup_theme', function(){
   });
 
 /** ADD CSS & JS TO GUTENBERG EDITOR + ADD GUTENBERG BLOCKS**/
-include_once(get_stylesheet_directory_uri() . '/inc/gutenberg.php');
+include_once('inc/gutenberg.php');
 
 /** ADD THEME CLASSES **/
-include_once(get_stylesheet_directory_uri() . '/inc/classes.php');
+include_once('inc/classes.php');
 
 /** EDIT SOME BOOTSCORE FUNCTIONS **/
-include_once(get_stylesheet_directory_uri() . '/inc/bootscore.php');
+include_once('inc/bootscore.php');
 
 /** ADD CUSTOM FUNCTIONS **/
-include_once(get_stylesheet_directory_uri() . '/inc/custom.php');
+include_once('inc/custom.php');
 
 /** ADD CUSTOM SHORTCODES **/
-include_once(get_stylesheet_directory_uri() . '/inc/shortcode.php');
+include_once('inc/shortcode.php');
 
 /** ADD THEME OPTIONS **/
-include_once(get_stylesheet_directory_uri() . '/inc/options.php');
+include_once('inc/options.php');

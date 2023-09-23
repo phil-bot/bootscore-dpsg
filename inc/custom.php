@@ -30,7 +30,7 @@ add_filter('pre_get_posts', function ( $query ) {
 
 add_filter( 'excerpt_length', function ( $length ) {
 
-	return 35;
+	return get_theme_option('excerpt_length');
 
 	}, 999 );
 
@@ -61,6 +61,13 @@ function dpsg_short_url($url, $length = 100) {
 function get_dpsgi( $icon = '', $classes = '' ) {
 	if ( isset( $icon ) ) $icon = '<i class="dpsgi dpsgi-' . $icon . ' ' . $classes . '"></i>';
 	return $icon;
+	}
+
+/*** GET THEME OPTION ***/
+
+function get_theme_option( $option = '' ) {
+    $options = get_option('dpsg_theme_options');
+    if (is_array($options)) return $options[$option];
 	}
 
 ?>

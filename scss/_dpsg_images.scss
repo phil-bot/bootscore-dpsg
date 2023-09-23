@@ -2,8 +2,11 @@
  IMAGES
 ******************/
 
-// HIDE THE EXCERPT AND MORTE BUTTON IN HEROES
-.heroes .swiper-slide .card-text { display: none; }
+.heroes .swiper-slide .card-text {
+    background-color:rgba(0, 0, 0, 0.5);
+    margin-bottom:0;
+    padding:1rem;
+    }
 
 // MAKE HEROES BEAUTIFUL ON EVERY SCREEN SIZE 
 .heroes {

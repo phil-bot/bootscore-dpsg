@@ -3,7 +3,7 @@ jQuery(function ($) {
 /******************
  THEME ADJUSTMENTS
 ******************/
-   
+   console.log(dpsg_theme_options);
     /*** Add classes to the main nav for user friendliness ***/
 	$('li.current-page-ancestor').children('a').addClass('active');
 	$('li.current-page-ancestor').parents('li').children('a').addClass('active');
@@ -20,6 +20,14 @@ jQuery(function ($) {
 			$(this).addClass('stretched-link');
 		}
 	});
+
+
+	$('.heroes .swiper-slide .card-text').addClass('d-none d-xl-block');
+
+	/*** Remove the excerpt and more button on heroes ***/
+	if(dpsg_theme_options.swiper_clean == 'true') {
+		$('.heroes .swiper-slide .card-text').remove();
+	}
 
 	/*** Remove page title and description on front-page ***/
 	if(dpsg_theme_options.title == 'true') {
@@ -42,3 +50,6 @@ jQuery(function ($) {
 	$(".card-body a.text-body h2.blog-post-title").parent().removeClass('text-decoration-none');
 
 }); // jQuery End
+
+
+
