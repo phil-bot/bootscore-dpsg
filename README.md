@@ -2,11 +2,7 @@
 
 Ein WordPress-Child-Theme, basierend auf [bootScore](https://github.com/bootscore/bootscore), das dem [DPSG](https://dpsg.de/) [Corporate Design Leitfaden](http://www.dpsg.de/sites/default/files/2021-04/dpsg_corporate_design_leitfaden.pdf) folgt.
 
-Das Theme beinhaltet:
-
- - passende [Scoutnet-Kalender](https://github.com/weed-/scoutnet-kalender)-Templates (Inline sowie Widget)
- - [bS Grid](https://github.com/bootscore/bs-grid)-Template
- - [bS Swiper](https://github.com/bootscore/bs-swiper)-Template
+Das Theme beinhaltet passende [Scoutnet-Kalender](https://github.com/weed-/scoutnet-kalender)-Templates (Inline sowie Widget)
 
 ## Installation
 

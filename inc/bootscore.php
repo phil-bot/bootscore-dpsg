@@ -61,7 +61,7 @@ if (!function_exists('the_breadcrumb')) : function the_breadcrumb() {
 	
 	// ON FRONTPAGE ONLY THE ICON
 	if (!is_home() && !is_front_page() && !is_page_template( array( 'page-blank-without-container.php', 'page-blank-with-container.php' ) ) ) { 
-		echo '<nav class="breadcrumb mb-4 mt-2 bg-light py-2 px-3 small rounded">';
+		echo '<nav class="breadcrumb mb-4 mt-2 bg-light py-2 px-3 small d-block rounded text-nowrap overflow-auto">';
 		echo '<a href="' . home_url('/') . '">' . ('<i class="dpsgi dpsgi-zelt"></i>') . '</a>' . $divider;
 	
 		// ON CATEGORY "Categories"
