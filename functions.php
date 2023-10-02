@@ -14,6 +14,8 @@ add_action('wp_enqueue_scripts', function() {
 add_action( 'wp_enqueue_scripts', function() {
   wp_enqueue_script('custom-pre-js', get_stylesheet_directory_uri() . '/js/pre.js', false, '', true);
   wp_localize_script('custom-pre-js', 'dpsg_theme_options', get_option('dpsg_theme_options'));
+  // mobile device fixed background image hack
+  wp_enqueue_script('fixedbg', get_stylesheet_directory_uri() . '/js/fixedbg.js', false, '', true);
   }, 0 );
 
 // after.js as last one
