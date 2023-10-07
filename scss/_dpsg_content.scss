@@ -4,7 +4,7 @@
 body {
   background-color: var(--bs-gray-200);
   height: auto;
-  }
+}
 
 #masthead .head-main .container,
 #page > #content.container,
@@ -32,4 +32,31 @@ body {
 
 .entry-header h1 {
   margin-bottom: 1rem;
+}
+
+.page-template-page-blank .entry-content {
+overflow-x: hidden !important;
+}
+
+//.page-template-page-blank .wp-block-columns,
+//.page-template-page-blank .wp-block-group__inner-container {
+.page-template-page-blank .entry-content > *:not(.wp-block-cover) {
+  @extend .container;
+}
+
+.page-template-page-blank .entry-content > *:not(.wp-block-cover) {
+  position: relative;
+}
+.page-template-page-blank .entry-content > *:not(.wp-block-cover):before {
+  content: "";
+  position: absolute;
+  height:100%;
+  left:-25%;
+  right:-25%;
+  z-index: -1;
+}
+
+.page-template-page-blank .entry-content > p {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
 }

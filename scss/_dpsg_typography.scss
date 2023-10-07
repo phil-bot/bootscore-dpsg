@@ -12,7 +12,7 @@ h2.blog-post-title a.text-white,
 .site-title,
 .site-description,
 .editor-post-title__block .editor-post-title__input,
-.wp-block-cover__inner-container p {
+.wp-block-cover__inner-container p.has-large-font-size {
   font-family: "Suez One" !important;
   font-size: calc(1.25rem + 1.5vw) !important;
 }
@@ -61,4 +61,19 @@ h2.blog-post-title a.text-white,
 // GIVE FEEDBACK FOR NAV LNKS
 #footer-menu li a:hover {
   text-decoration: underline !important;
+}
+
+
+/*** CONTENT ***/
+.has-small-font-size {
+  @extend .fs-6;
+}
+.has-medium-font-size {
+  @extend .fs-5;
+}
+.has-large-font-size {
+  @extend .fs-3;
+}
+.has-x-large-font-size {
+  @extend .fs-1;
 }

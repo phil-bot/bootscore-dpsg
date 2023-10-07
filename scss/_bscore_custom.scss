@@ -56,24 +56,3 @@
     font-size: $input-btn-font-size-sm;
   }
   }
-
-// SPIELPLATZ: HANDY HINTERGRUND COVER SOLLEN TOLL AUSSEHEN UND SCOLLEN !!!
-
-//&.has-parallax { @supports (-webkit-overflow-scrolling: touch) { background-attachment: scroll; } }
-//@supports (-webkit-overflow-scrolling: touch) { 	body * { 		background-attachment: scroll; 	} }
-
-
-//wp-block-cover__image-background.has-parallax
-
-.wp-block-cover__image-background.has-parallax{
-
-  //position: fixed;
-}
-
-div[class*="wp-block-"] {
-  //position:sticky;
-  //z-index:-10;
-  //height: 100vh;
-  //width: 100vw;
-  //background-color:#fff;
-}

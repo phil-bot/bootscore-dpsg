@@ -18,6 +18,12 @@ h2.blog-post-title a.text-white,
   color: var(--bs-white) !important;
   text-shadow: 4px 4px 7px black;
 }
+.page-template-page-blank .entry-content > *:not(.wp-block-cover) {
+  background-color: var(--bs-gray-200);
+}
+.page-template-page-blank .entry-content > *:not(.wp-block-cover):before {
+  background-color: inherit;
+}
 
 // MAKE LINKS AND TEXT IN CARD-FOOTER AND TEXT IN BREADCRUMB MORE DISCREET
 .card-footer,

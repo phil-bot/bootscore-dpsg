@@ -7,10 +7,8 @@ jQuery(function ($) {
 		}));
 		$('.has-parallax').each(function(index, el) {
 			var bg = $(this).css('background-image');
-			var color = $('body').css('background-color');
 			if(bg != 'none') {
 				$(this).css('background-image', 'none');
-				$('.wp-block-group').css('background-color', color);
 				$('#fixedbg').css('background-image', bg);
 				$('#fixedbg').css('z-index', '-10');
 				$('#fixedbg').css('position', 'fixed');
@@ -21,7 +19,7 @@ jQuery(function ($) {
 				$('#fixedbg').css('background-position','50% 50%');
 				$('#fixedbg').css('background-repeat','no-repeat');
 				$('#fixedbg').css('background-size','cover');
-				//return false;
+				return false;
 			}
 		});
 	}
