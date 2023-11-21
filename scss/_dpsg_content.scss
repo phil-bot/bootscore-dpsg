@@ -40,8 +40,9 @@ overflow-x: hidden !important;
 
 //.page-template-page-blank .wp-block-columns
 //.page-template-page-blank .wp-block-group__inner-container
-
+//.page-template-page-blank .wp-block-group__inner-container >,
 .page-template-page-blank .entry-content > {
+  div p,
   p {
     margin-bottom: 0;
     padding-bottom: 1rem;
@@ -63,5 +64,10 @@ overflow-x: hidden !important;
   }
   *:not(.wp-block-cover) {
     position: relative;
+  }
+  div form div.mb-3:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 1rem !important;
+
   }
 }
