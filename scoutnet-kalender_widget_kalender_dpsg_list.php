@@ -32,11 +32,11 @@ if ($ajaxcall !== true) : ?>
 		<div class="d-flex" data-bs-toggle="tooltip" title="<?php echo htmlspecialchars(trim($event->Title)); if ( $event->Description ) : echo ": " . htmlspecialchars($event->Description); endif; ?>">
 			<div class="d-felx flex-shrink-0">
 				<div class="">
-					<small class="d-flex justify-content-center bg-secondary text-white py-0 px-2 rounded-top small"><?php echo substr($shortmonth->format($event->Start),0,3); ?></small>
+					<small class="d-flex justify-content-center bg-secondary text-white py-0 px-2 rounded-top small  font-monospace"><?php echo substr($shortmonth->format($event->Start),0,3); ?></small>
 					<h5 class="d-flex justify-content-center py-1 rounded-bottom border border-top-0 m-0 text-black"><?php echo date('d', $event->Start); ?></h5>
 				</div>
 			</div>
-			<div class="d-flex flex-grow-1 ms-3 mb-0">
+			<div class="d-flex flex-grow-1 ms-2 mb-0">
 				<div class="col-11 col-md-6 col-lg-7 col-xl-9 col-xxl-11">
 					<h6 class="mb-0 text-truncate"><?php echo htmlspecialchars(trim($event->Title)); ?></h6>
 					<span class="small">

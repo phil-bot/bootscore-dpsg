@@ -38,25 +38,30 @@ body {
 overflow-x: hidden !important;
 }
 
-//.page-template-page-blank .wp-block-columns,
-//.page-template-page-blank .wp-block-group__inner-container {
-.page-template-page-blank .entry-content > *:not(.wp-block-cover) {
-  @extend .container;
-}
+//.page-template-page-blank .wp-block-columns
+//.page-template-page-blank .wp-block-group__inner-container
 
-.page-template-page-blank .entry-content > *:not(.wp-block-cover) {
-  position: relative;
-}
-.page-template-page-blank .entry-content > *:not(.wp-block-cover):before {
-  content: "";
-  position: absolute;
-  height:100%;
-  left:-25%;
-  right:-25%;
-  z-index: -1;
-}
-
-.page-template-page-blank .entry-content > p {
-  margin-bottom: 0;
-  padding-bottom: 1rem;
+.page-template-page-blank .entry-content > {
+  p {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+  }
+  *:not(.wp-block-cover) {
+    @extend .container;
+  }
+  *:not(.wp-block-cover):before {
+    content: "";
+    position: absolute;
+    height:100%;
+    left:-25%;
+    right:-25%;
+    z-index: -1;
+  }
+  *:not(.wp-block-cover) {
+    position: relative;
+  }
 }
