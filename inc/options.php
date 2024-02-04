@@ -10,7 +10,7 @@ add_action( 'admin_init', function(){
 
 // Seite in der Dashboard-Navigation erstellen
 add_action( 'admin_menu', function() {
-	add_theme_page('Optionen', 'Optionen', 'edit_theme_options', 'theme-optionen', 'dpsg_theme_options_page' ); // Seitentitel, Titel in der Navi, Berechtigung zum Editieren (http://codex.wordpress.org/Roles_and_Capabilities) , Slug, Funktion 
+	add_theme_page('Optionen', 'Theme Optionen', 'edit_theme_options', 'theme-optionen', 'dpsg_theme_options_page' ); // Seitentitel, Titel in der Navi, Berechtigung zum Editieren (http://codex.wordpress.org/Roles_and_Capabilities) , Slug, Funktion 
     });
 
 // Optionen-Seite erstellen
