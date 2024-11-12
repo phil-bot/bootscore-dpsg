@@ -24,7 +24,7 @@ jQuery(function ($) {
 	/*** mobile device fixed background image hack ***/
 	$is_mobile_device = null !== navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/);
 
-	//if ($is_mobile_device) {
+	if ($is_mobile_device) {
 
 		// create helper div for each fixed-bg wp-parallax
 		$('.has-parallax').each(function(index) {
@@ -66,9 +66,11 @@ jQuery(function ($) {
 				$("[id^=fixedbg-content-]").each(function() {
 
 					if( isOnScreen( $(this) ) ) {
-						scrollIdx = $(this).attr('id').match(/[\d]/)[0];
+						scrollIdx = parseInt($(this).attr('id').split('-')[2], 10);
 						if ( scrollIdx > last ) {
-							console.log(scrollIdx + ' > ' + last);
+							console.log(scrollIdx);
+							$('#fixedbg-helper-' + scrollIdx).show();
+							$('#fixedbg-helper-' + last).hide();
 							last = scrollIdx;
 						}
 					}
@@ -82,9 +84,11 @@ jQuery(function ($) {
 				$("[id^=fixedbg-content-]").each(function() {
 
 					if( isOnScreen( $(this) ) ) {
-						scrollIdx = $(this).attr('id').match(/[\d]/)[0];
+						scrollIdx = parseInt($(this).attr('id').split('-')[2], 10);
 						if ( scrollIdx < last ) {
-							console.log(scrollIdx + ' < ' + last);
+							console.log(scrollIdx);
+							$('#fixedbg-helper-' + scrollIdx).show();
+							$('#fixedbg-helper-' + last).hide();
 							last = scrollIdx;
 						}
 					}
@@ -93,19 +97,11 @@ jQuery(function ($) {
 			
 		   }
 		   lastScrollTop = st;
+
+
+		
 		});
 
-	//}
+	}
 
 }); // jQuery End
-
-
-
-				/*$("[id^=fixedbg-content-]").each(function() {
-					var idx = $(this).attr('id').match(/[\d]/);
-					if($(this).isInViewport()) {
-						$('#fixedbg-helper-' + idx).show();
-					} else {
-						$('#fixedbg-helper-' + idx).fadeOut('fast');
-					};
-				});*/

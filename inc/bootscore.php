@@ -18,15 +18,16 @@ add_action('bs_after_primary', function () {
 	}
 
 	/** ADD CAROUSEL/SWIPER TO FRONT PAGE **/
-	if ( is_home() && !is_paged() && get_theme_option('swiper') == "true" && dpsg_is_plugin_active( 'bs-swiper-main/main.php' )) {
+/*	if ( is_home() && !is_paged() && get_theme_option('swiper') == "true" && dpsg_is_plugin_active( 'bs-swiper-main/main.php' )) {
 		$sticky = get_option( 'sticky_posts' );
 		rsort( $sticky );
 		$sticky = array_slice( $sticky, 0, 10 );
 		$post_ids = implode(', ', $sticky);
-		echo '<div class="mt-2">';
-		echo do_shortcode('[bs-swiper-hero type="post" id="' . $post_ids . '"]');
+		if ( get_theme_option('swiper_clean') == "true" ) echo '<div class="mt-2 no-read-more">' . do_shortcode('[bs-swiper-hero type="post" excerpt="false" tags="false" id="' . $post_ids . '"]');
+		else echo '<div class="mt-2">' . do_shortcode('[bs-swiper-hero type="post"  id="' . $post_ids . '"]');
 		echo '</div>';
 	}
+*/
 
 	/** ADD PAGINATION ON TOP WHEN PAGE 1+ **/
 	if ( is_home() && is_paged()  ) {

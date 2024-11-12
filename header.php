@@ -102,7 +102,14 @@
           <?php if (is_active_sidebar('top-nav')) : ?>
             <div class="d-lg-flex d-none">
               <?php dynamic_sidebar('top-nav'); ?>
-                  </div>
+            </div>
+          <?php endif; ?>
+
+          <!-- Top Nav Search -->
+          <?php if ( get_theme_option('search') == true ) : ?>
+          <div class="d-lg-flex d-none" data-bs-toggle="tooltip" title="Suche öffnen">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalsearch"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
           <?php endif; ?>
 
           <!-- Navbar Toggler -->          
@@ -114,9 +121,11 @@
       </div><!-- .container -->
 
     </nav><!-- #Top Nav -->
-        
+    
+
     <!-- Search Button Modal -->
-    <div class="modal fade" id="modal-search" tabindex="-1" aria-labelledby="search" aria-hidden="true">
+    <?php if ( get_theme_option('search') == true ) : ?>
+    <div class="modal fade" id="modalsearch" tabindex="-1" aria-labelledby="search" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -127,3 +136,4 @@
         </div>
       </div>
     </div>
+    <?php endif; ?>

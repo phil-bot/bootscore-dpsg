@@ -1,5 +1,6 @@
 <?php
 
+
 /*** styles ***/ 
 add_action('wp_enqueue_scripts', function() {
   // style.css
@@ -8,8 +9,8 @@ add_action('wp_enqueue_scripts', function() {
   $modified_bootscoreChildCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/css/main.css'));
   wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.css', array('parent-style'), $modified_bootscoreChildCss);
   // Remove WP-Styles
-  wp_dequeue_style('classic-theme-styles');
-  wp_dequeue_style('global-styles');
+  //wp_dequeue_style('classic-theme-styles');
+  //wp_dequeue_style('global-styles');
   });
 
 /*** scripts ***/ 
@@ -27,6 +28,9 @@ add_action( 'wp_enqueue_scripts', function() {
   wp_enqueue_script('custom-after-js', get_stylesheet_directory_uri() . '/js/after.js', false, '', true);
   wp_localize_script('custom-after-js', 'dpsg_theme_options', get_option('dpsg_theme_options'));
   }, 99999 );
+
+
+
 
 /*** custom-logo support  ***/ 
 add_action( 'after_setup_theme', function(){

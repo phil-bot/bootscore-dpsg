@@ -21,23 +21,6 @@ jQuery(function ($) {
 		}
 	});
 
-
-	$('.heroes .swiper-slide .card-text').addClass('d-none d-xl-block');
-
-	/*** Remove the excerpt and more button on heroes ***/
-	if(dpsg_theme_options.swiper_clean == 'true') {
-		$('.heroes .swiper-slide .card-text').remove();
-	}
-
-	/*** Remove page title and description on front-page ***/
-	if(dpsg_theme_options.title == 'true') {
-		$('main#main.site-main div.py-3.py-md-5.text-center').remove();
-        // And adjust paddings if swiper is not true
-        if(dpsg_theme_options.swiper != 'true') {
-            $('main#main.site-main').addClass('pt-3');
-        }
-	}
-
 	/*** Add class to figure child, if its a gutenberg template for bootstrap cards with top-image ***/
 	$("figure.card-img-top img").addClass('card-img-top');
 	

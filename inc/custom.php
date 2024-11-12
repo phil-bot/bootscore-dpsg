@@ -38,6 +38,15 @@ add_filter( 'excerpt_length', function ( $length ) {
  FUNCTIONS
 ******************/
 
+/*** ARRAY ARGS TO SHORTCODE ***/
+
+function dpsg_args_shortcode($args){
+	foreach ($args as $key => $value) {
+		$return = $return . " $key=\"$value\"";
+	}
+	return $return;
+	}
+
 /*** IS PLUGIN ACTIVE ***/
 
 function dpsg_is_plugin_active($plugin){

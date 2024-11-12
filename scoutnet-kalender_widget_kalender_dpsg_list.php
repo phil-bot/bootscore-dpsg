@@ -37,7 +37,7 @@ if ($ajaxcall !== true) : ?>
 				</div>
 			</div>
 			<div class="d-flex flex-grow-1 ms-2 mb-0">
-				<div class="col-11 col-md-6 col-lg-7 col-xl-9 col-xxl-11">
+				<div class="col-11 col-md-6 col-lg-6 col-xl-8 col-xxl-9">
 					<h6 class="mb-0 text-truncate"><?php echo htmlspecialchars(trim($event->Title)); ?></h6>
 					<span class="small">
 						<?php if ( $event->Location ) : ?>
